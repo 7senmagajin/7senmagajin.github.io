@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>過去の動画一覧 | 7選マガジン</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans',
+               'Meiryo', sans-serif;
+  line-height: 1.7;
+  color: #2a2640;
+  background: linear-gradient(180deg, #fff5f9 0%, #fff 200px);
+  min-height: 100vh;
+}
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+header.hero {
+  text-align: center;
+  padding: 32px 16px 24px;
+}
+.genre-badge {
+  display: inline-block;
+  background: #ff3268;
+  color: #fff;
+  padding: 6px 18px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+h1 {
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+.meta { color: #888; font-size: 13px; }
+.tiktok-link {
+  display: inline-block;
+  margin-top: 14px;
+  background: #000;
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+.tiktok-link:hover { opacity: 0.85; }
+.lead {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin: 20px 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  font-size: 15px;
+}
+.product {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+.product .rank {
+  display: inline-block;
+  background: linear-gradient(135deg, #ffb320, #ff7a18);
+  color: #fff;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: 800;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+.product.rank-1 .rank { background: linear-gradient(135deg, #ffd700, #ffa500); }
+.product.rank-2 .rank { background: linear-gradient(135deg, #c0c0c0, #a0a0a0); }
+.product.rank-3 .rank { background: linear-gradient(135deg, #cd7f32, #a05a20); }
+.product h2 {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+.product .image {
+  text-align: center;
+  margin: 12px 0;
+}
+.product .image img {
+  max-width: 100%;
+  max-height: 280px;
+  border-radius: 8px;
+  background: #f5f5f5;
+}
+.product .blurb {
+  font-size: 14px;
+  color: #555;
+  margin: 12px 0;
+}
+.product .info {
+  font-size: 13px;
+  color: #888;
+  margin: 8px 0 16px;
+}
+.product .info strong { color: #ff3268; }
+.cta-btn {
+  display: block;
+  background: linear-gradient(135deg, #bf0000 0%, #e84c4c 100%);
+  color: #fff;
+  text-align: center;
+  padding: 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 15px;
+  box-shadow: 0 4px 12px rgba(191,0,0,0.25);
+  transition: transform 0.1s;
+}
+.cta-btn:hover { transform: translateY(-1px); }
+hr.divider {
+  border: none;
+  border-top: 1px dashed #ddd;
+  margin: 32px 0;
+}
+.outro {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 24px;
+  text-align: center;
+}
+.outro a { color: #ff3268; text-decoration: none; font-weight: bold; }
+footer {
+  text-align: center;
+  font-size: 11px;
+  color: #999;
+  margin-top: 32px;
+  padding: 16px;
+}
+.archive-link {
+  display: block;
+  text-align: center;
+  margin: 24px 0;
+  color: #555;
+  font-size: 13px;
+}
+
+.video-card { display: block; background: #fff; border-radius: 12px;
+  padding: 16px 18px; margin-bottom: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  text-decoration: none; color: inherit; }
+.video-card:hover { transform: translateY(-1px); }
+.video-card .vc-genre { display: inline-block; background: #fff0f4;
+  color: #ff3268; padding: 2px 10px; border-radius: 6px;
+  font-size: 11px; font-weight: bold; margin-bottom: 6px; }
+.video-card .vc-title { font-size: 15px; font-weight: bold; line-height: 1.5; }
+.video-card .vc-date { color: #999; font-size: 11px; margin-top: 4px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <header class="hero">
+    <h1>📚 過去の動画一覧</h1>
+    <p class="meta">7選マガジン全1本</p>
+  </header>
+  <a href="videos/20260429-1603-video.html" class="video-card">
+  <span class="vc-genre">コスメ</span>
+  <p class="vc-title">楽天で爆売れ中の神コスメ7選</p>
+  <p class="vc-date">2026/04/29</p>
+</a>
+  <a href="index.html" class="archive-link">← トップに戻る</a>
+  <footer>
+    ※ 当ページのリンクは楽天アフィリエイトを利用しています。
+  </footer>
+</div>
+</body>
+</html>
