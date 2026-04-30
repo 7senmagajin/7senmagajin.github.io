@@ -155,115 +155,78 @@ footer {
   font-size: 13px;
 }
 
-.hero-section { text-align: center; padding: 24px 0 16px; }
-.latest-flag { display: inline-block; background: #ffeb3b; color: #2a2640;
-  padding: 4px 14px; border-radius: 999px; font-size: 12px; font-weight: bold;
-  margin-bottom: 12px; }
-.lead-text { background: #fff; border-radius: 12px; padding: 14px;
-  margin: 16px 0; font-size: 14px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
-.section-header { text-align: center; margin: 24px 0 16px; }
-.section-title { font-size: 18px; font-weight: 800; }
-.section-sub { color: #888; font-size: 12px; margin-top: 4px; }
-.past-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px; }
-@media (min-width: 600px) { .past-grid { grid-template-columns: 1fr 1fr 1fr; } }
-.video-card { display: block; background: #fff; border-radius: 12px;
-  padding: 12px 14px; text-decoration: none; color: inherit;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.05); }
-.video-card:hover { transform: translateY(-1px); }
-.video-card .vc-genre { display: inline-block; background: #fff0f4;
-  color: #ff3268; padding: 2px 8px; border-radius: 6px;
-  font-size: 10px; font-weight: bold; margin-bottom: 6px; }
-.video-card .vc-title { font-size: 13px; font-weight: bold; line-height: 1.4; }
-.video-card .vc-date { color: #999; font-size: 10px; margin-top: 4px; }
-.genre-chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;
-  padding: 0 16px; }
-.genre-chip { display: inline-block; background: #fff; color: #ff3268;
-  padding: 6px 14px; border-radius: 999px; text-decoration: none;
-  font-size: 13px; font-weight: bold;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
-.genre-chip:hover { background: #ff3268; color: #fff; }
+.intro-text { text-align: center; color: #888; font-size: 14px;
+  margin: 8px 0 28px; }
+.hero-button { display: block; text-decoration: none; color: inherit;
+  background: linear-gradient(135deg, #ff3268 0%, #ff7a18 100%);
+  border-radius: 18px; padding: 28px 24px; text-align: center;
+  box-shadow: 0 8px 28px rgba(255,50,104,0.32);
+  margin-bottom: 32px; transition: transform 0.12s; color: #fff; }
+.hero-button:hover { transform: translateY(-2px); }
+.hero-flag { display: inline-block; background: #ffeb3b; color: #2a2640;
+  padding: 4px 14px; border-radius: 999px; font-size: 12px;
+  font-weight: 800; margin-bottom: 12px; }
+.hero-genre { font-size: 14px; opacity: 0.95; margin-bottom: 6px;
+  font-weight: bold; }
+.hero-title { font-size: 22px; font-weight: 800; line-height: 1.4;
+  margin: 6px 0 14px; color: #fff; }
+.hero-arrow { display: inline-block; background: rgba(255,255,255,0.95);
+  color: #ff3268; padding: 10px 22px; border-radius: 999px;
+  font-weight: 800; font-size: 14px; }
+.divider-text { display: flex; align-items: center; gap: 12px;
+  color: #aaa; font-size: 12px; margin: 24px 0 8px; }
+.divider-text::before, .divider-text::after { content: '';
+  flex: 1; border-top: 1px solid #ddd; }
+.hint { text-align: center; color: #888; font-size: 13px;
+  margin-bottom: 16px; }
+.genre-grid { display: grid; grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px; margin-bottom: 20px; }
+.genre-card { display: block; text-decoration: none; color: inherit;
+  background: #fff; border-radius: 14px; padding: 18px 8px;
+  text-align: center; box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+  transition: transform 0.1s; }
+.genre-card:hover { transform: translateY(-1px);
+  box-shadow: 0 4px 18px rgba(255,50,104,0.18); }
+.genre-emoji { font-size: 32px; line-height: 1; margin-bottom: 6px; }
+.genre-name { font-size: 13px; font-weight: 800; color: #2a2640;
+  line-height: 1.3; margin-bottom: 2px; }
+.genre-sub { font-size: 10px; color: #ff3268; font-weight: bold; }
+.archive-tiny { text-align: center; margin: 24px 0 8px; }
+.archive-tiny a { color: #aaa; font-size: 12px; text-decoration: underline; }
 </style>
 </head>
 <body>
 <div class="container">
-  <div class="hero-section">
-  <div class="latest-flag">🔥 最新動画の紹介商品</div>
-  <h1>楽天で今バズってる神アイテム7選</h1>
-  <p class="meta">2026/04/29 投稿 ・ <a href="https://www.tiktok.com/@7senmagajin" target="_blank" rel="noopener">📺 動画を見る</a></p>
-  <p class="lead-text">今回は楽天市場で実際に売れている「総合トレンド」カテゴリの人気商品7点をまとめました。</p>
+  <header class="hero" style="text-align:center; padding-bottom:8px;">
+    <h1 style="font-size:24px;">7選マガジン</h1>
+    <p class="intro-text">TikTokで見た動画を選んでください</p>
+  </header>
+  <a href="videos/20260430-0928-video.html" class="hero-button">
+  <span class="hero-flag">🔥 最新動画</span>
+  <div class="hero-genre">🎮 ガジェット</div>
+  <h2 class="hero-title">絶対買うべき神ガジェット7選</h2>
+  <span class="hero-arrow">紹介商品を見る →</span>
+</a>
+  <div class="divider-text">
+  <span>または ジャンルから探す</span>
 </div>
-<div class="product rank-1">
-  <span class="rank">1</span>
-  <h2>＼P5倍／母の日 花 ギフト まだ間に合う 花束 誕生日 スイーツ カーネーション お祝い アレンジ プレスバターサンド 生花 退職 記念日 ブーケ フラワーギフト 義母 女友達 彼女 妻 プレゼント 50代 60代 70代 お見舞い 退院祝い 退職祝い 送別会 結婚記念日 最強配送 あす楽</h2>
-  <div class="image"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/bloomeestore/cabinet/bouq006/00ab_rak_bouq006.jpg?_ex=128x128" alt="＼P5倍／母の日 花 ギフト まだ間に合う 花束 誕生日 スイーツ カーネーション お祝い アレンジ プレスバターサンド 生花 退職 記念日 ブーケ フラワーギフト 義母 女友達 彼女 妻 プレゼント 50代 60代 70代 お見舞い 退院祝い 退職祝い 送別会 結婚記念日 最強配送 あす楽" loading="lazy"></div>
-  <p class="blurb">手軽に華やかなギフトを贈りたい時に最適な、ブルーミーの花束とスイーツのセットです。美しくアレンジメントされた生花が届くので、お部屋に飾るだけで空間が明るくなります。母の日はもちろん、誕生日のお祝いにもおすすめです。</p>
-  <p class="info">価格: <strong>2,980円</strong> / ショップ: お花ギフト ブルーミー（bloomee）</p>
-  <a href="https://hb.afl.rakuten.co.jp/hgc/g00uaobm.a75k146d.g00uaobm.a75k2e6b/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbloomeestore%2Fbouq006%2F&amp;rafcid=wsc_i_ra_1048481002549569427" class="cta-btn" target="_blank" rel="nofollow sponsored noopener">👉 楽天市場でチェックする</a>
-</div><div class="product rank-2">
-  <span class="rank">2</span>
-  <h2>【楽天ブックス限定先着特典+早期予約特典】M!LK ARENA TOUR 2025-2026 “SMILE POP!”(初回限定盤2DVD+Photobook)(＜山中柔太朗＞ライブ写真トレカ+ジャケット表1ステッカー(初回限定盤Ver)) [ M!LK ]</h2>
-  <div class="image"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/0937/2100014960937_1_2.gif?_ex=128x128" alt="【楽天ブックス限定先着特典+早期予約特典】M!LK ARENA TOUR 2025-2026 “SMILE POP!”(初回限定盤2DVD+Photobook)(＜山中柔太朗＞ライブ写真トレカ+ジャケット表1ステッカー(初回限定盤Ver)) [ M!LK ]" loading="lazy"></div>
-  <p class="blurb">同じく「M!LK」のアリーナツアーを収録した初回限定盤DVDです。豪華なフォトブックが付属しており、ライブの感動やメンバーの表情をより深く味わうことができます。コレクションとして手元に残しておきたい方にぴったりです。</p>
-  <p class="info">価格: <strong>8,882円</strong> / ショップ: 楽天ブックス</p>
-  <a href="https://hb.afl.rakuten.co.jp/hgc/g00q072m.a75k10bc.g00q072m.a75k232f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F18615741%2F&amp;rafcid=wsc_i_ra_1048481002549569427" class="cta-btn" target="_blank" rel="nofollow sponsored noopener">👉 楽天市場でチェックする</a>
-</div><div class="product rank-3">
-  <span class="rank">3</span>
-  <h2>【楽天ブックス限定先着特典+早期予約特典】M!LK ARENA TOUR 2025-2026 “SMILE POP!”(通常盤Blu-ray)【Blu-ray】(＜山中柔太朗＞ライブ写真トレカ+ジャケット表1ステッカー(通常盤Ver)) [ M!LK ]</h2>
-  <div class="image"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/0920/2100014960920_1_2.gif?_ex=128x128" alt="【楽天ブックス限定先着特典+早期予約特典】M!LK ARENA TOUR 2025-2026 “SMILE POP!”(通常盤Blu-ray)【Blu-ray】(＜山中柔太朗＞ライブ写真トレカ+ジャケット表1ステッカー(通常盤Ver)) [ M!LK ]" loading="lazy"></div>
-  <p class="blurb">人気グループ「M!LK」のアリーナツアーの熱気を自宅で楽しめる通常盤Blu-rayです。楽天ブックス限定の特典が用意されており、推し活を満喫したいファンの方におすすめです。休日のリフレッシュタイムに最適です。</p>
-  <p class="info">価格: <strong>7,837円</strong> / ショップ: 楽天ブックス</p>
-  <a href="https://hb.afl.rakuten.co.jp/hgc/g00q072m.a75k10bc.g00q072m.a75k232f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F18615740%2F&amp;rafcid=wsc_i_ra_1048481002549569427" class="cta-btn" target="_blank" rel="nofollow sponsored noopener">👉 楽天市場でチェックする</a>
-</div><div class="product rank-4">
-  <span class="rank">4</span>
-  <h2>【送料無料】 ワンデーアキュビューオアシス 90枚パック 2~4箱セット ( 1日使い捨て ワンデー 1day ) コンタクトレンズ ワンデー ワンデーアキュビュー アキュビューオアシス アキュビュー コンタクトレンズ コンタクト ワンデーコンタクト ジョンソン ワンデーオアシス</h2>
-  <div class="image"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/earth-contact/cabinet/thumbnail_/variation/1doa90-02_740.jpg?_ex=128x128" alt="【送料無料】 ワンデーアキュビューオアシス 90枚パック 2~4箱セット ( 1日使い捨て ワンデー 1day ) コンタクトレンズ ワンデー ワンデーアキュビュー アキュビューオアシス アキュビュー コンタクトレンズ コンタクト ワンデーコンタクト ジョンソン ワンデーオアシス" loading="lazy"></div>
-  <p class="blurb">乾燥が気になる環境で過ごすことが多い方には、ワンデーアキュビューオアシスが適しています。長時間のパソコン作業など、目を酷使する日々の潤い感をサポートしてくれる、使い勝手の良いワンデータイプのレンズです。</p>
-  <p class="info">価格: <strong>14,790円</strong> / ショップ: アースコンタクト</p>
-  <a href="https://hb.afl.rakuten.co.jp/hgc/g00rz7bm.a75k1a75.g00rz7bm.a75k20f4/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fearth-contact%2F1doa90-02%2F&amp;rafcid=wsc_i_ra_1048481002549569427" class="cta-btn" target="_blank" rel="nofollow sponsored noopener">👉 楽天市場でチェックする</a>
-</div><div class="product rank-5">
-  <span class="rank">5</span>
-  <h2>【限定カラー】【クーポン利用で20%OFF】エバーカラーワンデーナチュラル (1箱20枚入り)( 送料無料 カラコン カラーコンタクト 度あり 度入り 度なし ワンデー 1day コンタクト エバーカラー エバーカラーワンデー エバカラ エバナチュ コンタクトレンズ )【新木優子】</h2>
-  <div class="image"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/queeneyes/cabinet/10603169/11380192/evernatural-i.jpg?_ex=128x128" alt="【限定カラー】【クーポン利用で20%OFF】エバーカラーワンデーナチュラル (1箱20枚入り)( 送料無料 カラコン カラーコンタクト 度あり 度入り 度なし ワンデー 1day コンタクト エバーカラー エバーカラーワンデー エバカラ エバナチュ コンタクトレンズ )【新木優子】" loading="lazy"></div>
-  <p class="blurb">自然な印象の瞳を演出したい方には、エバーカラーワンデーナチュラルが向いています。日常使いしやすい落ち着いたカラーバリエーションで、休日のお出かけはもちろん、オフィスカジュアルなど様々なシーンに馴染みます。</p>
-  <p class="info">価格: <strong>2,598円</strong> / ショップ: クイーンアイズ楽天市場店</p>
-  <a href="https://hb.afl.rakuten.co.jp/hgc/g00rcj9m.a75k1b11.g00rcj9m.a75k2315/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fqueeneyes%2Fevercolor_natural%2F&amp;rafcid=wsc_i_ra_1048481002549569427" class="cta-btn" target="_blank" rel="nofollow sponsored noopener">👉 楽天市場でチェックする</a>
-</div><div class="product rank-6">
-  <span class="rank">6</span>
-  <h2>【送料無料】ワンデーアキュビューモイスト 90枚パック2箱セット 1日使い捨て コンタクトレンズ （ワンデイ / ジョンソン&amp;ジョンソン / ジョンソン・エンド・ジョンソン）</h2>
-  <div class="image"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/pricon/cabinet/item-thumb/jj/cp/c-1dayms90-2p_p10.jpg?_ex=128x128" alt="【送料無料】ワンデーアキュビューモイスト 90枚パック2箱セット 1日使い捨て コンタクトレンズ （ワンデイ / ジョンソン&amp;ジョンソン / ジョンソン・エンド・ジョンソン）" loading="lazy"></div>
-  <p class="blurb">毎日の必需品であるコンタクトレンズのまとめ買いに便利な、ワンデーアキュビューモイストの90枚パックです。潤いを保ちやすい設計が採用されており、長時間の着用でも快適なつけ心地をサポートしてくれます。</p>
-  <p class="info">価格: <strong>13,530円</strong> / ショップ: アットレンズ</p>
-  <a href="https://hb.afl.rakuten.co.jp/hgc/g00qvpkm.a75k10e6.g00qvpkm.a75k2198/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fpricon%2Fc-1dayms90-2p%2F&amp;rafcid=wsc_i_ra_1048481002549569427" class="cta-btn" target="_blank" rel="nofollow sponsored noopener">👉 楽天市場でチェックする</a>
-</div><div class="product rank-7">
-  <span class="rank">7</span>
-  <h2>＼まもなくお値段あがります／ 母の日 プレゼント 花 スイーツ カーネーション ギフト 鉢植え 5号 銀座千疋屋バウムクーヘンも選べる セット お花とお菓子 和菓子 洋菓子 FleurTown吉本花城園 まだ間に合う早割終了</h2>
-  <div class="image"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/kajoen/cabinet/haha2026/no1/500/00sweets.jpg?_ex=128x128" alt="＼まもなくお値段あがります／ 母の日 プレゼント 花 スイーツ カーネーション ギフト 鉢植え 5号 銀座千疋屋バウムクーヘンも選べる セット お花とお菓子 和菓子 洋菓子 FleurTown吉本花城園 まだ間に合う早割終了" loading="lazy"></div>
-  <p class="blurb">母の日の贈り物に悩んだら、カーネーションの鉢植えと有名店のスイーツがセットになったこちらがおすすめです。お花と美味しいお菓子を一緒に楽しめるため、感謝の気持ちを伝える特別な日のギフトにぴったりです。</p>
-  <p class="info">価格: <strong>3,473円</strong> / ショップ: Fleur Town　吉本花城園</p>
-  <a href="https://hb.afl.rakuten.co.jp/hgc/g00py13m.a75k147d.g00py13m.a75k2be9/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkajoen%2Fhaha_kashinoki%2F&amp;rafcid=wsc_i_ra_1048481002549569427" class="cta-btn" target="_blank" rel="nofollow sponsored noopener">👉 楽天市場でチェックする</a>
-</div>
-
-  <hr class="divider">
-<div class="section-header">
-  <h2 class="section-title">📚 過去の動画</h2>
-  <p class="section-sub">あなたが見た動画はこちら</p>
-</div>
-<div class="past-grid"><a href="videos/20260429-1623-wifi.html" class="video-card">
-  <span class="vc-genre">通信サービス・WiFi</span>
-  <p class="vc-title">絶対に失敗しない！神WiFi7選</p>
-  <p class="vc-date">2026/04/29</p>
-</a><a href="videos/20260429-1633-video.html" class="video-card">
-  <span class="vc-genre">総合トレンド</span>
-  <p class="vc-title">楽天で今バズってる神アイテム7選</p>
-  <p class="vc-date">2026/04/29</p>
+<p class="hint">あなたが見た動画のジャンルを選んでください</p>
+<div class="genre-grid"><a href="videos/20260429-1633-video.html" class="genre-card">
+  <div class="genre-emoji">🛒</div>
+  <div class="genre-name">総合トレンド</div>
+  <div class="genre-sub">最新を見る</div>
+</a><a href="videos/20260429-1623-wifi.html" class="genre-card">
+  <div class="genre-emoji">📡</div>
+  <div class="genre-name">通信サービス・WiFi</div>
+  <div class="genre-sub">最新を見る</div>
+</a><a href="videos/20260429-1603-video.html" class="genre-card">
+  <div class="genre-emoji">💄</div>
+  <div class="genre-name">コスメ</div>
+  <div class="genre-sub">最新を見る</div>
 </a></div>
-
-
-  <hr class="divider">
-<div class="section-header">
-  <h2 class="section-title">🏷️ ジャンル別</h2>
+  <div class="archive-tiny">
+  <a href="archive.html">全4動画の一覧 →</a>
 </div>
-<div class="genre-chips"><a href="archive.html#コスメ" class="genre-chip">コスメ</a> <a href="archive.html#通信サービス・WiFi" class="genre-chip">通信サービス・WiFi</a> <a href="archive.html#総合トレンド" class="genre-chip">総合トレンド</a></div>
   <hr class="divider">
   <div class="outro">
     <p>📺 <a href="https://www.tiktok.com/@7senmagajin" target="_blank" rel="noopener">@7senmagajin (TikTok) をフォロー</a></p>
