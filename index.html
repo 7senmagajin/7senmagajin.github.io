@@ -155,98 +155,119 @@ footer {
   font-size: 13px;
 }
 
-.intro-text { text-align: center; color: #888; font-size: 14px;
-  margin: 8px 0 28px; }
-.hero-button { display: block; text-decoration: none; color: inherit;
-  background: linear-gradient(135deg, #ff3268 0%, #ff7a18 100%);
-  border-radius: 18px; padding: 28px 24px; text-align: center;
-  box-shadow: 0 8px 28px rgba(255,50,104,0.32);
-  margin-bottom: 32px; transition: transform 0.12s; color: #fff; }
-.hero-button:hover { transform: translateY(-2px); }
-.hero-flag { display: inline-block; background: #ffeb3b; color: #2a2640;
-  padding: 4px 14px; border-radius: 999px; font-size: 12px;
-  font-weight: 800; margin-bottom: 12px; }
-.hero-genre { font-size: 14px; opacity: 0.95; margin-bottom: 6px;
-  font-weight: bold; }
-.hero-title { font-size: 22px; font-weight: 800; line-height: 1.4;
-  margin: 6px 0 14px; color: #fff; }
-.hero-arrow { display: inline-block; background: rgba(255,255,255,0.95);
-  color: #ff3268; padding: 10px 22px; border-radius: 999px;
-  font-weight: 800; font-size: 14px; }
-.divider-text { display: flex; align-items: center; gap: 12px;
-  color: #aaa; font-size: 12px; margin: 24px 0 8px; }
-.divider-text::before, .divider-text::after { content: '';
-  flex: 1; border-top: 1px solid #ddd; }
-.hint { text-align: center; color: #888; font-size: 13px;
-  margin-bottom: 16px; }
-.genre-grid { display: grid; grid-template-columns: 1fr 1fr 1fr;
-  gap: 12px; margin-bottom: 20px; }
-.genre-card { display: block; text-decoration: none; color: inherit;
-  background: #fff; border-radius: 14px; padding: 18px 8px;
-  text-align: center; box-shadow: 0 3px 14px rgba(0,0,0,0.06);
-  transition: transform 0.1s; }
-.genre-card:hover { transform: translateY(-1px);
-  box-shadow: 0 4px 18px rgba(255,50,104,0.18); }
-.genre-emoji { font-size: 32px; line-height: 1; margin-bottom: 6px; }
-.genre-name { font-size: 13px; font-weight: 800; color: #2a2640;
-  line-height: 1.3; margin-bottom: 2px; }
-.genre-sub { font-size: 10px; color: #ff3268; font-weight: bold; }
-.archive-tiny { text-align: center; margin: 24px 0 8px; }
-.archive-tiny a { color: #aaa; font-size: 12px; text-decoration: underline; }
+.intro-text { text-align: center; color: #746d78; font-size: 14px; margin: 8px 0 18px; }
+.guide { background: #fff; border: 2px solid #ff3268; border-radius: 16px;
+  padding: 14px 16px; text-align: center; font-weight: 800; margin-bottom: 14px; }
+.search-wrap { position: sticky; top: 0; z-index: 5; padding: 8px 0 14px;
+  background: rgba(255,248,251,.96); backdrop-filter: blur(8px); }
+.search { width: 100%; border: 1px solid #ddd; border-radius: 14px;
+  padding: 14px 16px 14px 44px; font-size: 16px; background: #fff;
+  box-shadow: 0 3px 14px rgba(0,0,0,.07); }
+.search-icon { position: absolute; left: 16px; top: 21px; font-size: 18px; }
+.video-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.video-choice { display: block; text-decoration: none; color: inherit;
+  background: #fff; border-radius: 16px; overflow: hidden;
+  box-shadow: 0 4px 18px rgba(42,38,64,.10); }
+.video-choice:hover { transform: translateY(-2px); box-shadow: 0 7px 24px rgba(255,50,104,.18); }
+.cover { position: relative; aspect-ratio: 3 / 4; background: #ffe6ef; overflow: hidden; }
+.cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.cover-fallback { width: 100%; height: 100%; display: grid; place-items: center;
+  font-size: 66px; background: linear-gradient(145deg,#ff3b73,#ff9418); }
+.latest-badge { position: absolute; top: 10px; left: 10px; color: #111;
+  background: #ffe928; border-radius: 999px; padding: 4px 11px;
+  font-size: 12px; font-weight: 900; box-shadow: 0 2px 8px rgba(0,0,0,.18); }
+.card-body { padding: 12px 13px 15px; }
+.card-meta { color: #918894; font-size: 11px; margin-bottom: 4px; }
+.card-body h2 { color: #2a2640; font-size: 15px; line-height: 1.42;
+  min-height: 2.84em; margin: 0 0 10px; }
+.card-cta { display: block; text-align: center; background: #ff3268; color: #fff;
+  border-radius: 10px; padding: 8px 6px; font-size: 13px; font-weight: 900; }
+.empty { display: none; text-align: center; color: #777; padding: 40px 10px; }
+@media (max-width: 420px) {
+  .container { padding-left: 12px; padding-right: 12px; }
+  .video-grid { gap: 10px; }
+  .card-body { padding: 10px; }
+  .card-body h2 { font-size: 13px; }
+}
 </style>
 </head>
 <body>
 <div class="container">
   <header class="hero" style="text-align:center; padding-bottom:8px;">
-    <h1 style="font-size:24px;">7選マガジン</h1>
-    <p class="intro-text">TikTokで見た動画を選んでください</p>
+    <h1 style="font-size:24px;">動画で紹介した商品を探す</h1>
+    <p class="intro-text">7選マガジンの商品まとめ</p>
   </header>
-  <a href="videos/20260508-1352-video.html" class="hero-button">
-  <span class="hero-flag">🔥 最新動画</span>
-  <div class="hero-genre">🛒 インテリア・寝具</div>
-  <h2 class="hero-title">快適な部屋作り神アイテム7選</h2>
-  <span class="hero-arrow">紹介商品を見る →</span>
-</a>
-  <div class="divider-text">
-  <span>または ジャンルから探す</span>
-</div>
-<p class="hint">あなたが見た動画のジャンルを選んでください</p>
-<div class="genre-grid"><a href="videos/20260506-2220-video.html" class="genre-card">
-  <div class="genre-emoji">🛒</div>
-  <div class="genre-name">ベビー・マタニティ</div>
-  <div class="genre-sub">最新を見る</div>
-</a><a href="videos/20260502-1003-video.html" class="genre-card">
-  <div class="genre-emoji">⛺</div>
-  <div class="genre-name">スポーツ・アウトドア</div>
-  <div class="genre-sub">最新を見る</div>
-</a><a href="videos/20260501-1659-video.html" class="genre-card">
-  <div class="genre-emoji">🛒</div>
-  <div class="genre-name">母の日ギフト</div>
-  <div class="genre-sub">最新を見る</div>
-</a><a href="videos/20260430-0929-video.html" class="genre-card">
-  <div class="genre-emoji">🐾</div>
-  <div class="genre-name">ペット用品</div>
-  <div class="genre-sub">最新を見る</div>
-</a><a href="videos/20260430-0928-video.html" class="genre-card">
-  <div class="genre-emoji">🎮</div>
-  <div class="genre-name">ガジェット</div>
-  <div class="genre-sub">最新を見る</div>
-</a><a href="videos/20260429-1633-video.html" class="genre-card">
-  <div class="genre-emoji">🛒</div>
-  <div class="genre-name">総合トレンド</div>
-  <div class="genre-sub">最新を見る</div>
-</a><a href="videos/20260429-1623-wifi.html" class="genre-card">
-  <div class="genre-emoji">📡</div>
-  <div class="genre-name">通信サービス・WiFi</div>
-  <div class="genre-sub">最新を見る</div>
-</a><a href="videos/20260429-1603-video.html" class="genre-card">
-  <div class="genre-emoji">💄</div>
-  <div class="genre-name">コスメ</div>
-  <div class="genre-sub">最新を見る</div>
+  <p class="guide">TikTokで見た動画の表紙をタップしてください</p>
+  <div class="search-wrap">
+    <span class="search-icon">⌕</span>
+    <input id="videoSearch" class="search" type="search" placeholder="動画タイトル・ジャンルで検索" aria-label="動画を検索">
+  </div>
+  <div id="videoGrid" class="video-grid"><a href="videos/20260508-1352-video.html" class="video-choice" data-search="快適な部屋作り神アイテム7選 インテリア・寝具">
+  <div class="cover"><img src="covers/20260508-1352-video.jpg" alt="快適な部屋作り神アイテム7選" loading="lazy"><span class="latest-badge">最新</span></div>
+  <div class="card-body">
+    <div class="card-meta">インテリア・寝具 · 2026/05/08</div>
+    <h2>快適な部屋作り神アイテム7選</h2>
+    <span class="card-cta">紹介商品を見る</span>
+  </div>
+</a><a href="videos/20260506-2220-video.html" class="video-choice" data-search="育児の質が爆上がりする神ベビー用品7選 ベビー・マタニティ">
+  <div class="cover"><img src="covers/20260506-2220-video.jpg" alt="育児の質が爆上がりする神ベビー用品7選" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-meta">ベビー・マタニティ · 2026/05/06</div>
+    <h2>育児の質が爆上がりする神ベビー用品7選</h2>
+    <span class="card-cta">紹介商品を見る</span>
+  </div>
+</a><a href="videos/20260502-1003-video.html" class="video-choice" data-search="休日を満喫する神アイテム7選 スポーツ・アウトドア">
+  <div class="cover"><img src="covers/20260502-1003-video.jpg" alt="休日を満喫する神アイテム7選" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-meta">スポーツ・アウトドア · 2026/05/02</div>
+    <h2>休日を満喫する神アイテム7選</h2>
+    <span class="card-cta">紹介商品を見る</span>
+  </div>
+</a><a href="videos/20260501-1659-video.html" class="video-choice" data-search="母の日に絶対喜ばれるギフト7選 母の日ギフト">
+  <div class="cover"><img src="covers/20260501-1659-video.jpg" alt="母の日に絶対喜ばれるギフト7選" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-meta">母の日ギフト · 2026/05/01</div>
+    <h2>母の日に絶対喜ばれるギフト7選</h2>
+    <span class="card-cta">紹介商品を見る</span>
+  </div>
+</a><a href="videos/20260430-0929-video.html" class="video-choice" data-search="ガチで売れてる神ペット用品7選 ペット用品">
+  <div class="cover"><img src="covers/20260430-0929-video.jpg" alt="ガチで売れてる神ペット用品7選" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-meta">ペット用品 · 2026/04/30</div>
+    <h2>ガチで売れてる神ペット用品7選</h2>
+    <span class="card-cta">紹介商品を見る</span>
+  </div>
+</a><a href="videos/20260430-0928-video.html" class="video-choice" data-search="絶対買うべき神ガジェット7選 ガジェット">
+  <div class="cover"><img src="covers/20260430-0928-video.jpg" alt="絶対買うべき神ガジェット7選" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-meta">ガジェット · 2026/04/30</div>
+    <h2>絶対買うべき神ガジェット7選</h2>
+    <span class="card-cta">紹介商品を見る</span>
+  </div>
+</a><a href="videos/20260429-1633-video.html" class="video-choice" data-search="楽天で今バズってる神アイテム7選 総合トレンド">
+  <div class="cover"><img src="covers/20260429-1633-video.jpg" alt="楽天で今バズってる神アイテム7選" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-meta">総合トレンド · 2026/04/29</div>
+    <h2>楽天で今バズってる神アイテム7選</h2>
+    <span class="card-cta">紹介商品を見る</span>
+  </div>
+</a><a href="videos/20260429-1623-wifi.html" class="video-choice" data-search="絶対に失敗しない！神WiFi7選 通信サービス・WiFi">
+  <div class="cover"><img src="covers/20260429-1623-wifi.jpg" alt="絶対に失敗しない！神WiFi7選" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-meta">通信サービス・WiFi · 2026/04/29</div>
+    <h2>絶対に失敗しない！神WiFi7選</h2>
+    <span class="card-cta">紹介商品を見る</span>
+  </div>
+</a><a href="videos/20260429-1603-video.html" class="video-choice" data-search="楽天で爆売れ中の神コスメ7選 コスメ">
+  <div class="cover"><img src="covers/20260429-1603-video.jpg" alt="楽天で爆売れ中の神コスメ7選" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-meta">コスメ · 2026/04/29</div>
+    <h2>楽天で爆売れ中の神コスメ7選</h2>
+    <span class="card-cta">紹介商品を見る</span>
+  </div>
 </a></div>
-  <div class="archive-tiny">
-  <a href="archive.html">全9動画の一覧 →</a>
-</div>
+  <p id="empty" class="empty">該当する動画が見つかりません</p>
+  <div style="text-align:center;margin:24px 0 4px;"><a href="archive.html">全9動画を一覧で見る</a></div>
   <hr class="divider">
   <div class="outro">
     <p>📺 <a href="https://www.tiktok.com/@7senmagajin" target="_blank" rel="noopener">@7senmagajin (TikTok) をフォロー</a></p>
@@ -256,5 +277,20 @@ footer {
     商品をご購入頂くと、当方に紹介料が発生する場合があります。
   </footer>
 </div>
+<script>
+const search = document.getElementById('videoSearch');
+const choices = [...document.querySelectorAll('.video-choice')];
+const empty = document.getElementById('empty');
+search.addEventListener('input', () => {
+  const q = search.value.trim().toLowerCase();
+  let shown = 0;
+  choices.forEach(card => {
+    const match = !q || card.dataset.search.toLowerCase().includes(q);
+    card.style.display = match ? '' : 'none';
+    if (match) shown += 1;
+  });
+  empty.style.display = shown ? 'none' : 'block';
+});
+</script>
 </body>
 </html>
