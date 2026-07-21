@@ -4,4 +4,4 @@ TikTokアカウント [@7senmagajin](https://www.tiktok.com/@7senmagajin) で紹
 
 公開URL: https://7senmagajin.github.io/
 
-最新動画: 20260720-1744-video
+最新動画: 20260721-1137-video
