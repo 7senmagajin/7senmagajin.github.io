@@ -127,6 +127,12 @@ h1 {
   transition: transform 0.1s;
 }
 .cta-btn:hover { transform: translateY(-1px); }
+.cta-group { display: grid; gap: 10px; }
+.cta-btn.amazon {
+  background: #ff9900;
+  color: #191919;
+  box-shadow: 0 4px 12px rgba(255,153,0,0.25);
+}
 hr.divider {
   border: none;
   border-top: 1px dashed #ddd;
@@ -202,8 +208,15 @@ footer {
     <span class="search-icon">⌕</span>
     <input id="videoSearch" class="search" type="search" placeholder="動画タイトル・ジャンルで検索" aria-label="動画を検索">
   </div>
-  <div id="videoGrid" class="video-grid"><a href="videos/20260722-1802-video.html" class="video-choice" data-search="クローゼット除湿グッズ7選 除湿用品">
-  <div class="cover"><img src="covers/20260722-1802-video.jpg" alt="クローゼット除湿グッズ7選" loading="lazy"><span class="latest-badge">最新</span></div>
+  <div id="videoGrid" class="video-grid"><a href="videos/20260724-1824-video.html" class="video-choice" data-search="アイリスオーヤマのサーキュレーター7選 サーキュレーター">
+  <div class="cover"><img src="covers/20260724-1824-video.jpg" alt="アイリスオーヤマのサーキュレーター7選" loading="lazy"><span class="latest-badge">最新</span></div>
+  <div class="card-body">
+    <div class="card-meta">サーキュレーター · 2026/07/24</div>
+    <h2>アイリスオーヤマのサーキュレーター7選</h2>
+    <span class="card-cta">紹介商品を見る</span>
+  </div>
+</a><a href="videos/20260722-1802-video.html" class="video-choice" data-search="クローゼット除湿グッズ7選 除湿用品">
+  <div class="cover"><img src="covers/20260722-1802-video.jpg" alt="クローゼット除湿グッズ7選" loading="lazy"></div>
   <div class="card-body">
     <div class="card-meta">除湿用品 · 2026/07/22</div>
     <h2>クローゼット除湿グッズ7選</h2>
@@ -309,7 +322,7 @@ footer {
   </div>
 </a></div>
   <p id="empty" class="empty">該当する動画が見つかりません</p>
-  <div style="text-align:center;margin:24px 0 4px;"><a href="archive.html">全15動画を一覧で見る</a></div>
+  <div style="text-align:center;margin:24px 0 4px;"><a href="archive.html">全16動画を一覧で見る</a></div>
   <hr class="divider">
   <div class="outro">
     <p>📺 <a href="https://www.tiktok.com/@7senmagajin" target="_blank" rel="noopener">@7senmagajin (TikTok) をフォロー</a></p>

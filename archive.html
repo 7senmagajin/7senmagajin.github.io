@@ -124,6 +124,12 @@ h1 {
   transition: transform 0.1s;
 }
 .cta-btn:hover { transform: translateY(-1px); }
+.cta-group { display: grid; gap: 10px; }
+.cta-btn.amazon {
+  background: #ff9900;
+  color: #191919;
+  box-shadow: 0 4px 12px rgba(255,153,0,0.25);
+}
 hr.divider {
   border: none;
   border-top: 1px dashed #ddd;
@@ -168,9 +174,14 @@ footer {
 <div class="container">
   <header class="hero">
     <h1>📚 過去の動画一覧</h1>
-    <p class="meta">7選マガジン全15本</p>
+    <p class="meta">7選マガジン全16本</p>
   </header>
-  <a href="videos/20260722-1802-video.html" class="video-card">
+  <a href="videos/20260724-1824-video.html" class="video-card">
+  <span class="vc-genre">サーキュレーター</span>
+  <p class="vc-title">アイリスオーヤマのサーキュレーター7選</p>
+  <p class="vc-date">2026/07/24</p>
+</a>
+<a href="videos/20260722-1802-video.html" class="video-card">
   <span class="vc-genre">除湿用品</span>
   <p class="vc-title">クローゼット除湿グッズ7選</p>
   <p class="vc-date">2026/07/22</p>
@@ -247,7 +258,7 @@ footer {
 </a>
   <a href="index.html" class="archive-link">← トップに戻る</a>
   <footer>
-    ※ 当ページのリンクは楽天アフィリエイトを利用しています。
+    ※ 当サイトはアフィリエイト広告を利用しています。
   </footer>
 </div>
 </body>
